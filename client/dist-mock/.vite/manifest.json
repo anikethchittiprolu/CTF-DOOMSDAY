@@ -1,0 +1,172 @@
+{
+  "_style-CxZBfWDt.css": {
+    "file": "assets/style-CxZBfWDt.css",
+    "src": "_style-CxZBfWDt.css"
+  },
+  "_style-DkOW5AJM.js": {
+    "file": "assets/style-DkOW5AJM.js",
+    "name": "style",
+    "css": [
+      "assets/style-CxZBfWDt.css"
+    ]
+  },
+  "index.html": {
+    "file": "assets/main-BcBgszS9.js",
+    "name": "main",
+    "src": "index.html",
+    "isEntry": true,
+    "imports": [
+      "_style-DkOW5AJM.js"
+    ],
+    "dynamicImports": [
+      "src/scenes/doomstadt.js",
+      "src/scenes/embassy.js",
+      "src/scenes/foundry.js",
+      "src/scenes/archives.js",
+      "src/scenes/haasenstadt.js",
+      "src/scenes/monastery.js",
+      "src/scenes/wundagore.js",
+      "src/scenes/baxter.js",
+      "src/scenes/timeplatform.js",
+      "src/scenes/citadel.js",
+      "src/map/map3d.js",
+      "src/map/mapflat.js",
+      "src/api/mock.js"
+    ]
+  },
+  "prepare.html": {
+    "file": "assets/prepare-D7KDpJNE.js",
+    "name": "prepare",
+    "src": "prepare.html",
+    "isEntry": true,
+    "imports": [
+      "_style-DkOW5AJM.js"
+    ]
+  },
+  "src/api/mock.js": {
+    "file": "assets/mock-DTjMF3D4.js",
+    "name": "mock",
+    "src": "src/api/mock.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html",
+      "_style-DkOW5AJM.js"
+    ]
+  },
+  "src/map/map3d.js": {
+    "file": "assets/map3d-BRiDszEX.js",
+    "name": "map3d",
+    "src": "src/map/map3d.js",
+    "isDynamicEntry": true
+  },
+  "src/map/mapflat.js": {
+    "file": "assets/mapflat-Cf9ttpo_.js",
+    "name": "mapflat",
+    "src": "src/map/mapflat.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html",
+      "_style-DkOW5AJM.js"
+    ]
+  },
+  "src/scenes/archives.js": {
+    "file": "assets/archives-90cY8V9m.js",
+    "name": "archives",
+    "src": "src/scenes/archives.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html",
+      "_style-DkOW5AJM.js"
+    ]
+  },
+  "src/scenes/baxter.js": {
+    "file": "assets/baxter-DAvTnlfI.js",
+    "name": "baxter",
+    "src": "src/scenes/baxter.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html",
+      "_style-DkOW5AJM.js"
+    ]
+  },
+  "src/scenes/citadel.js": {
+    "file": "assets/citadel-C1ijM6Zc.js",
+    "name": "citadel",
+    "src": "src/scenes/citadel.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html",
+      "_style-DkOW5AJM.js"
+    ]
+  },
+  "src/scenes/doomstadt.js": {
+    "file": "assets/doomstadt-Sv4zgvDP.js",
+    "name": "doomstadt",
+    "src": "src/scenes/doomstadt.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html",
+      "_style-DkOW5AJM.js"
+    ]
+  },
+  "src/scenes/embassy.js": {
+    "file": "assets/embassy-B8R_F7jC.js",
+    "name": "embassy",
+    "src": "src/scenes/embassy.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html",
+      "_style-DkOW5AJM.js"
+    ]
+  },
+  "src/scenes/foundry.js": {
+    "file": "assets/foundry-_4A4Mw7C.js",
+    "name": "foundry",
+    "src": "src/scenes/foundry.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html",
+      "_style-DkOW5AJM.js"
+    ]
+  },
+  "src/scenes/haasenstadt.js": {
+    "file": "assets/haasenstadt-CYy2qPkc.js",
+    "name": "haasenstadt",
+    "src": "src/scenes/haasenstadt.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html",
+      "_style-DkOW5AJM.js"
+    ]
+  },
+  "src/scenes/monastery.js": {
+    "file": "assets/monastery-DN5u3I1X.js",
+    "name": "monastery",
+    "src": "src/scenes/monastery.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html",
+      "_style-DkOW5AJM.js"
+    ]
+  },
+  "src/scenes/timeplatform.js": {
+    "file": "assets/timeplatform-B3au6LC_.js",
+    "name": "timeplatform",
+    "src": "src/scenes/timeplatform.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html",
+      "_style-DkOW5AJM.js"
+    ]
+  },
+  "src/scenes/wundagore.js": {
+    "file": "assets/wundagore-HZLV39xn.js",
+    "name": "wundagore",
+    "src": "src/scenes/wundagore.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html",
+      "_style-DkOW5AJM.js"
+    ]
+  }
+}
