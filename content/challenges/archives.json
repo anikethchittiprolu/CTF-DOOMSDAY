@@ -1,0 +1,62 @@
+{
+  "region": "archives",
+  "category": "Cryptography",
+  "challenges": [
+    {
+      "key": "archives-cipher-wheel",
+      "name": "Cipher Wheel",
+      "tier": "apprentice",
+      "value": 50,
+      "npc": "boris",
+      "round": 1
+    },
+    {
+      "key": "archives-floating-page",
+      "name": "Floating Page",
+      "tier": "apprentice",
+      "value": 50,
+      "npc": "boris",
+      "round": 2
+    },
+    {
+      "key": "archives-candle-index",
+      "name": "Candle Index",
+      "tier": "journeyman",
+      "value": 100,
+      "npc": "boris",
+      "round": 3
+    },
+    {
+      "key": "archives-grimoire-vault",
+      "name": "Grimoire Vault",
+      "tier": "journeyman",
+      "value": 100,
+      "npc": "boris",
+      "round": 4
+    },
+    {
+      "key": "archives-rune-table",
+      "name": "Rune Table",
+      "tier": "adept",
+      "value": 150,
+      "npc": "boris",
+      "round": 5
+    },
+    {
+      "key": "archives-scribe-s-key",
+      "name": "Scribe's Key",
+      "tier": "magister",
+      "value": 200,
+      "npc": "boris",
+      "round": 6
+    },
+    {
+      "key": "archives-sealed-folio",
+      "name": "Sealed Folio",
+      "tier": "sorcerer-scientist",
+      "value": 300,
+      "npc": "doom",
+      "round": 8
+    }
+  ]
+}

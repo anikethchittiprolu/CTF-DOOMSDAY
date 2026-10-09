@@ -1,0 +1,38 @@
+{
+  "region": "monastery",
+  "category": "Malware Analysis",
+  "challenges": [
+    {
+      "key": "monastery-warded-circle",
+      "name": "Warded Circle",
+      "tier": "apprentice",
+      "value": 50,
+      "npc": "strange",
+      "round": 1
+    },
+    {
+      "key": "monastery-cold-forge",
+      "name": "Cold Forge",
+      "tier": "journeyman",
+      "value": 100,
+      "npc": "strange",
+      "round": 3
+    },
+    {
+      "key": "monastery-mask-inscription",
+      "name": "Mask Inscription",
+      "tier": "adept",
+      "value": 150,
+      "npc": "strange",
+      "round": 5
+    },
+    {
+      "key": "monastery-cursed-binary",
+      "name": "Cursed Binary",
+      "tier": "magister",
+      "value": 200,
+      "npc": "strange",
+      "round": 7
+    }
+  ]
+}

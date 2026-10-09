@@ -1,0 +1,21 @@
+{
+  "regions": [
+    {"id":"doomstadt","name":"Doomstadt","category":"Web Exploitation","domain":"Science","act":1,"slots":15,"map":{"x":0.50,"y":0.52},"entry":"entry-doomstadt","tagline":"Night city of grey stone and green neon."},
+    {"id":"embassy","name":"Latverian Embassy, New York","category":"OSINT","domain":"Science","act":1,"slots":15,"map":{"x":0.13,"y":0.30},"entry":"entry-embassy","tagline":"Brownstone rooms and a wall of watching screens."},
+    {"id":"foundry","name":"Doombot Foundry","category":"Reverse Engineering","domain":"Science","act":1,"slots":15,"map":{"x":0.72,"y":0.62},"entry":"entry-foundry","tagline":"Furnaces, assembly lines and half-built machines."},
+    {"id":"archives","name":"Castle Doom Archives","category":"Cryptography","domain":"Sorcery","act":1,"slots":15,"map":{"x":0.38,"y":0.30},"entry":"entry-archives","tagline":"A gothic library of floating pages."},
+    {"id":"haasenstadt","name":"Romani Camp of Haasenstadt","category":"Digital Forensics","domain":"Sorcery","act":1,"slots":15,"map":{"x":0.28,"y":0.72},"entry":"entry-haasenstadt","tagline":"A burned camp at dusk."},
+    {"id":"monastery","name":"Monastery of the Mask","category":"Malware Analysis","domain":"Sorcery","act":1,"slots":15,"map":{"x":0.80,"y":0.25},"entry":"entry-monastery","tagline":"A snowbound temple around a sealed forge."},
+    {"id":"wundagore","name":"Mount Wundagore","category":"Steganography","domain":"Sorcery","act":1,"slots":15,"map":{"x":0.62,"y":0.20},"entry":"entry-wundagore","tagline":"A peak that will not hold still."},
+    {"id":"baxter","name":"Baxter Building, Earth-828","category":"Hardware and Crypto Math","domain":"Science","act":1,"slots":15,"map":{"x":0.88,"y":0.78},"entry":"entry-baxter","tagline":"A sixties laboratory in primary colours."},
+    {"id":"timeplatform","name":"Time Platform","category":"Logic and Timing","domain":"Science","act":1,"slots":15,"map":{"x":0.45,"y":0.84},"entry":"entry-timeplatform","tagline":"A ring above a broken clock."},
+    {"id":"citadel","name":"Citadel at the End of Time","category":"Final Chain","domain":"Both","act":1,"slots":15,"map":{"x":0.20,"y":0.50},"entry":"entry-citadel","tagline":"The dying World Tree and the Engine below it."}
+  ],
+  "tiers": [
+    {"id":"apprentice","label":"Apprentice","max":75,"colour":"#3ddc84","shape":"circle"},
+    {"id":"journeyman","label":"Journeyman","max":125,"colour":"#f4d03f","shape":"square"},
+    {"id":"adept","label":"Adept","max":175,"colour":"#ff9f43","shape":"triangle"},
+    {"id":"magister","label":"Magister","max":250,"colour":"#ff4d4d","shape":"diamond"},
+    {"id":"sorcerer-scientist","label":"Sorcerer-Scientist","max":100000,"colour":"#b36bff","shape":"star"}
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "region": "timeplatform",
+  "category": "Logic and Timing",
+  "challenges": [
+    {
+      "key": "timeplatform-broken-clock",
+      "name": "Broken Clock",
+      "tier": "apprentice",
+      "value": 50,
+      "npc": "strange",
+      "round": 1
+    },
+    {
+      "key": "timeplatform-slow-debris",
+      "name": "Slow Debris",
+      "tier": "journeyman",
+      "value": 100,
+      "npc": "strange",
+      "round": 3
+    },
+    {
+      "key": "timeplatform-tick-tock",
+      "name": "Tick Tock",
+      "tier": "journeyman",
+      "value": 100,
+      "npc": "strange",
+      "round": 4
+    },
+    {
+      "key": "timeplatform-time-loop",
+      "name": "Time Loop",
+      "tier": "magister",
+      "value": 200,
+      "npc": "strange",
+      "round": 8
+    }
+  ]
+}

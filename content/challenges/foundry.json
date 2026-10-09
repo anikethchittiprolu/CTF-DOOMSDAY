@@ -1,0 +1,70 @@
+{
+  "region": "foundry",
+  "category": "Reverse Engineering",
+  "challenges": [
+    {
+      "key": "foundry-assembly-line",
+      "name": "Assembly Line",
+      "tier": "apprentice",
+      "value": 50,
+      "npc": "doombot",
+      "round": 1
+    },
+    {
+      "key": "foundry-half-built-bot",
+      "name": "Half-Built Bot",
+      "tier": "apprentice",
+      "value": 50,
+      "npc": "doombot",
+      "round": 2
+    },
+    {
+      "key": "foundry-plc-cabinet",
+      "name": "PLC Cabinet",
+      "tier": "journeyman",
+      "value": 100,
+      "npc": "doombot",
+      "round": 3
+    },
+    {
+      "key": "foundry-molten-channel",
+      "name": "Molten Channel",
+      "tier": "journeyman",
+      "value": 100,
+      "npc": "doombot",
+      "round": 4
+    },
+    {
+      "key": "foundry-servo-firmware",
+      "name": "Servo Firmware",
+      "tier": "adept",
+      "value": 150,
+      "npc": "doombot",
+      "round": 5
+    },
+    {
+      "key": "foundry-diagnostics-port",
+      "name": "Diagnostics Port",
+      "tier": "adept",
+      "value": 150,
+      "npc": "doombot",
+      "round": 6
+    },
+    {
+      "key": "foundry-quality-gate",
+      "name": "Quality Gate",
+      "tier": "magister",
+      "value": 200,
+      "npc": "doombot",
+      "round": 7
+    },
+    {
+      "key": "foundry-doombot-prime",
+      "name": "Doombot Prime",
+      "tier": "sorcerer-scientist",
+      "value": 300,
+      "npc": "doom",
+      "round": 8
+    }
+  ]
+}

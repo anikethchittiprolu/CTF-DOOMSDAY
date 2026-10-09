@@ -1,0 +1,12 @@
+node_modules/
+client/dist/
+theme/doomsday/static/
+theme/doomsday/templates/partials/game_assets.html
+__pycache__/
+.pytest_cache/
+*.pyc
+.venv/
+e2e/output/
+e2e/report/
+test-results/
+.env

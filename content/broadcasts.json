@@ -1,0 +1,104 @@
+{
+  "high_if_solves_per_team": 2,
+  "broadcasts": [
+    {
+      "key": "h0",
+      "hour": 0,
+      "title": "The Summons",
+      "subtitle": "Doom welcomes the applicants to Latveria. The trial begins now. Every region holds one task that can be solved today. Doom expects most of you to fail.",
+      "variants": {
+        "low": "Doom is Victor von Doom, sovereign of Latveria. {teams} applicants have arrived. The Trial begins. Each region holds a task, and every task can be solved. Doom has seen applicants before. Most were forgotten by morning. Begin. Doom permits no excuses. The clock is running. Doom suggests the applicants begin with the regions nearest to them, and read every word.",
+        "mid": "Doom is Victor von Doom, sovereign of Latveria. {teams} applicants have arrived at the gates. The Trial begins. Each region holds a task, and every task can be solved. Doom has seen applicants before. Few were remembered. Begin. Doom permits no excuses. The clock is running. Doom suggests the applicants begin with the regions nearest to them, and read every word.",
+        "high": "Doom is Victor von Doom, sovereign of Latveria. {teams} applicants stand at the gates. The Trial begins. Each region holds a task, and every task can be solved. Doom has seen applicants before. Some were remembered. Begin. Doom permits no excuses. The clock is running. Doom suggests the applicants begin with the regions nearest to them, and read every word."
+      }
+    },
+    {
+      "key": "h3",
+      "hour": 3,
+      "title": "First Breach",
+      "subtitle": "Three hours have passed. {total_solves} tasks have fallen. The Incursion clock has lost one hour. A second set of tasks is now open in the regions.",
+      "variants": {
+        "low": "Three hours have passed. {total_solves} tasks have fallen. Doom is not impressed. The Incursion clock has lost one hour, and {incursion_hours_left} remain. More tasks are now open. Doom suggests the applicants read more carefully. The Foundry is awake, the Archives are open, and the Embassy is watching. Doom has been patient. Doom is not infinitely patient.",
+        "mid": "Three hours have passed. {total_solves} tasks have fallen. Doom is mildly interested. The Incursion clock has lost one hour, and {incursion_hours_left} remain. More tasks are now open. Doom suggests the applicants continue. The Foundry is awake, the Archives are open, and the Embassy is watching. Doom has been patient. Doom is not infinitely patient.",
+        "high": "Three hours have passed. {total_solves} tasks have fallen, and {top_team} leads the Registry. Doom is mildly impressed. The Incursion clock shows {incursion_hours_left} hours. More tasks are now open. Doom suggests the applicants do not become comfortable. The Foundry is awake, the Archives are open, and the Embassy is watching. Doom has been patient. Doom is not infinitely patient."
+      }
+    },
+    {
+      "key": "h6",
+      "hour": 6,
+      "title": "Beneath the Mask",
+      "subtitle": "Six hours have passed. The Trial now looks beneath the mask. {incursion_hours_left} Incursion hours remain. Doom has opened a third set of tasks and a darker chapter of the Codex.",
+      "variants": {
+        "low": "Six hours have passed. {incursion_hours_left} Incursion hours remain. The applicants have solved {total_solves} tasks, which is fewer than Doom expected. The next tasks are open. Doom will tell the applicants what lies behind the mask, if they earn it. Doom has opened the Codex further. Those who read it will understand why the country is the way it is. Those who do not will be none the wiser.",
+        "mid": "Six hours have passed. {incursion_hours_left} Incursion hours remain. The applicants have solved {total_solves} tasks. The next tasks are open. Doom will tell the applicants what lies behind the mask, if they earn it. Doom has opened the Codex further. Those who read it will understand why the country is the way it is. Those who do not will be none the wiser.",
+        "high": "Six hours have passed. {incursion_hours_left} Incursion hours remain. The applicants have solved {total_solves} tasks, and the Foundry has been breached {region_solves:foundry} times. The next tasks are open. Doom will tell the applicants what lies behind the mask. Doom has opened the Codex further. Those who read it will understand why the country is the way it is. Those who do not will be none the wiser."
+      }
+    },
+    {
+      "key": "h9",
+      "hour": 9,
+      "title": "The Cracks",
+      "subtitle": "Nine hours have passed. The sky has begun to crack. {incursion_hours_left} Incursion hours remain. Doom has opened a fourth set of tasks. Strange has sent a warning.",
+      "variants": {
+        "low": "Nine hours have passed. The sky has begun to crack, and {incursion_hours_left} Incursion hours remain. Few have noticed. Doom has opened more tasks. Doom advises the applicants to look up, and then to look faster. Wundagore shifts, and the Time Platform ticks without pattern. Doom has observed these signs before, and they were never harmless.",
+        "mid": "Nine hours have passed. The sky has begun to crack, and {incursion_hours_left} Incursion hours remain. Some have noticed. Doom has opened more tasks. Doom advises the applicants to look up, and then to work faster. Wundagore shifts, and the Time Platform ticks without pattern. Doom has observed these signs before, and they were never harmless.",
+        "high": "Nine hours have passed. The sky has begun to crack, and {incursion_hours_left} Incursion hours remain. {total_solves} tasks have fallen, yet the crack widens. Doom has opened more tasks. Doom advises the applicants to look up. Wundagore shifts, and the Time Platform ticks without pattern. Doom has observed these signs before, and they were never harmless."
+      }
+    },
+    {
+      "key": "h12",
+      "hour": 12,
+      "title": "The Offer",
+      "subtitle": "Twelve hours have passed. Doom makes an offer to the applicants. Banner has joined him. A second Earth is now visible. {incursion_hours_left} Incursion hours remain.",
+      "variants": {
+        "low": "Twelve hours have passed. Doom makes an offer to those who remain. Banner has joined Doom, persuaded by arithmetic. A second Earth hangs in the sky. {incursion_hours_left} Incursion hours remain. Doom does not ask twice. Doom does not need to. There will be no second offer. Doom has weighed the applicants and has found them worth the weight of a decision.",
+        "mid": "Twelve hours have passed. Doom makes an offer to those who remain. Banner has joined Doom, persuaded by arithmetic. A second Earth hangs in the sky. {incursion_hours_left} Incursion hours remain. Doom asks once. The answer will be remembered. There will be no second offer. Doom has weighed the applicants and has found them worth the weight of a decision.",
+        "high": "Twelve hours have passed. Doom makes an offer to those who remain, and {teams} teams are still in the Trial. Banner has joined Doom, persuaded by arithmetic. A second Earth hangs in the sky. {incursion_hours_left} Incursion hours remain. The answer will be remembered. There will be no second offer. Doom has weighed the applicants and has found them worth the weight of a decision."
+      }
+    },
+    {
+      "key": "h15",
+      "hour": 15,
+      "title": "A Silent Throne",
+      "subtitle": "Fifteen hours have passed. A figure has appeared in the Citadel and says nothing. {incursion_hours_left} Incursion hours remain. Doom has opened a sixth set of tasks.",
+      "variants": {
+        "low": "Fifteen hours have passed. A figure sits in the Citadel and says nothing. {incursion_hours_left} Incursion hours remain, and {total_solves} tasks have fallen. Doom has opened more. Doom does not ask who the figure is. Doom knows. The Citadel is open to those who can reach it. Doom has told the sentries to let the worthy pass. Doom has also told them that no one is worthy.",
+        "mid": "Fifteen hours have passed. A figure sits in the Citadel and says nothing. {incursion_hours_left} Incursion hours remain, and {total_solves} tasks have fallen. Doom has opened more. Doom knows who the figure is. The Citadel is open to those who can reach it. Doom has told the sentries to let the worthy pass. Doom has also told them that no one is worthy.",
+        "high": "Fifteen hours have passed. A figure sits in the Citadel and says nothing, and {region_solves:citadel} of you have reached it. {incursion_hours_left} Incursion hours remain. Doom has opened more tasks. Doom knows who the figure is. The Citadel is open to those who can reach it. Doom has told the sentries to let the worthy pass. Doom has also told them that no one is worthy."
+      }
+    },
+    {
+      "key": "h18",
+      "hour": 18,
+      "title": "Grief",
+      "subtitle": "Eighteen hours have passed. Doom speaks of his mother. {incursion_hours_left} Incursion hours remain. The seventh set of tasks is open. Few teams remain at the pace they began.",
+      "variants": {
+        "low": "Eighteen hours have passed. {incursion_hours_left} Incursion hours remain. Doom has opened more tasks. Doom will say this once. Doom had a mother. She was taken from him. Every machine in this country was built so that no one would ever take anything from him again. Doom does not say this to be pitied. Doom says it so that what follows is understood. The hour is late, and the work is nearly done.",
+        "mid": "Eighteen hours have passed. {incursion_hours_left} Incursion hours remain. Doom has opened more tasks. Doom will say this once. Doom had a mother. She was taken from him. Every machine in this country exists because of that. Doom does not say this to be pitied. Doom says it so that what follows is understood. The hour is late, and the work is nearly done.",
+        "high": "Eighteen hours have passed. {incursion_hours_left} Incursion hours remain, and {total_solves} tasks have fallen. Doom has opened more tasks. Doom will say this once. Doom had a mother. She was taken. Every machine here exists because of that. Doom does not say this to be pitied. Doom says it so that what follows is understood. The hour is late, and the work is nearly done."
+      }
+    },
+    {
+      "key": "h21",
+      "hour": 21,
+      "title": "The Last Hour",
+      "subtitle": "Twenty-one hours have passed. One Incursion hour remains. The sky is red. The final set of tasks is open. Doom awaits the applicants at the Citadel.",
+      "variants": {
+        "low": "Twenty-one hours have passed. One Incursion hour remains. The sky is red. The last tasks are open. {total_solves} have fallen. The Registry shows {top_team} in the lead. Doom awaits the applicants in the Citadel. Doom does not wait long. The Engine waits. The sky waits. Doom has waited longer than either, and Doom is, at last, almost out of patience.",
+        "mid": "Twenty-one hours have passed. One Incursion hour remains. The sky is red. The last tasks are open. {total_solves} have fallen. The Registry shows {top_team} in the lead. Doom awaits the applicants in the Citadel. The Engine waits. The sky waits. Doom has waited longer than either, and Doom is, at last, almost out of patience.",
+        "high": "Twenty-one hours have passed. One Incursion hour remains. The sky is red. The last tasks are open. {total_solves} have fallen, a number Doom will admit is respectable. The Registry shows {top_team} in the lead. Doom awaits the applicants. The Engine waits. The sky waits. Doom has waited longer than either, and Doom is, at last, almost out of patience."
+      }
+    },
+    {
+      "key": "h24",
+      "hour": 24,
+      "title": "The Verdict",
+      "subtitle": "The Trial is over. Doom has counted the solves and read the Registry. The Incursion clock has stopped. Doom will remember those who remained until the end.",
+      "variants": {
+        "low": "The Trial is over. {total_solves} tasks fell and {teams} teams entered. The Registry names {top_team} at its head. The Incursion clock has stopped at {incursion_hours_left}. Doom will remember those who remained. The rest will be filed. Doom thanks no one. Doom notes that no one asked to be thanked. The Registry stands as the record, and the record is final.",
+        "mid": "The Trial is over. {total_solves} tasks fell and {teams} teams entered. The Registry names {top_team} at its head. The Incursion clock has stopped at {incursion_hours_left}. Doom will remember those who remained. Doom thanks no one. Doom notes that no one asked to be thanked. The Registry stands as the record, and the record is final.",
+        "high": "The Trial is over. {total_solves} tasks fell and {teams} teams entered. The Registry names {top_team} at its head. The Incursion clock has stopped at {incursion_hours_left}. Doom will remember those who remained, and Doom remembers everything. Doom thanks no one. Doom notes that no one asked to be thanked. The Registry stands as the record, and the record is final."
+      }
+    }
+  ]
+}

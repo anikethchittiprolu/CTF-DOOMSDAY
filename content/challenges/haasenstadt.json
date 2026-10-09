@@ -1,0 +1,46 @@
+{
+  "region": "haasenstadt",
+  "category": "Digital Forensics",
+  "challenges": [
+    {
+      "key": "haasenstadt-burned-wagon",
+      "name": "Burned Wagon",
+      "tier": "apprentice",
+      "value": 50,
+      "npc": "shuri",
+      "round": 1
+    },
+    {
+      "key": "haasenstadt-medic-s-log",
+      "name": "Medic's Log",
+      "tier": "apprentice",
+      "value": 50,
+      "npc": "shuri",
+      "round": 2
+    },
+    {
+      "key": "haasenstadt-ash-letters",
+      "name": "Ash Letters",
+      "tier": "journeyman",
+      "value": 100,
+      "npc": "shuri",
+      "round": 4
+    },
+    {
+      "key": "haasenstadt-camp-ledger",
+      "name": "Camp Ledger",
+      "tier": "adept",
+      "value": 150,
+      "npc": "shuri",
+      "round": 5
+    },
+    {
+      "key": "haasenstadt-last-transmission",
+      "name": "Last Transmission",
+      "tier": "magister",
+      "value": 200,
+      "npc": "shuri",
+      "round": 7
+    }
+  ]
+}

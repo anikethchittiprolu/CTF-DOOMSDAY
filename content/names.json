@@ -1,0 +1,24 @@
+{
+  "event": "DOOMSDAY: The Latverian Protocol",
+  "characters": {
+    "doom": "Victor von Doom",
+    "doom_short": "Doom",
+    "boris": "Boris",
+    "shuri": "Shuri",
+    "reed": "Reed Richards",
+    "reed_doom_form": "Richards",
+    "strange": "Doctor Strange",
+    "banner": "Bruce Banner",
+    "loki": "Loki",
+    "tva": "The TVA",
+    "doombot": "Doombot"
+  },
+  "places": {
+    "country": "Latveria",
+    "capital": "Doomstadt",
+    "registry": "Sovereign Registry",
+    "codex": "Codex of Doom",
+    "engine": "Doomsday Engine"
+  },
+  "player": { "applicant_prefix": "LAT-APPLICANT-" }
+}

@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Doom Rounds Console</title>
+<style>
+  :root { --bg:#101412; --panel:#171d1a; --line:#2b3a33; --fg:#d8e4dc; --dim:#8a9b92; --em:#3ddc84; --amber:#e0a63a; --red:#ff5d5d; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg); font:14px/1.4 system-ui, sans-serif; }
+  header { display:flex; gap:16px; align-items:center; padding:10px 16px; border-bottom:1px solid var(--line); flex-wrap:wrap; }
+  h1 { font-size:16px; margin:0; letter-spacing:.08em; text-transform:uppercase; color:var(--em); }
+  h2 { font-size:12px; text-transform:uppercase; letter-spacing:.1em; color:var(--dim); margin:0 0 8px; }
+  main { padding:16px; display:grid; gap:16px; }
+  section { background:var(--panel); border:1px solid var(--line); padding:12px; border-radius:4px; }
+  button, input, select { background:#0d110f; color:var(--fg); border:1px solid var(--line); padding:5px 8px; border-radius:3px; font:inherit; }
+  button { cursor:pointer; } button:hover { border-color:var(--em); }
+  button.danger:hover { border-color:var(--red); }
+  table { width:100%; border-collapse:collapse; } td, th { padding:4px 6px; border-bottom:1px solid var(--line); text-align:left; vertical-align:middle; }
+  .tag { font-size:11px; padding:1px 6px; border-radius:8px; border:1px solid var(--line); }
+  .open { color:var(--em); border-color:var(--em); } .held { color:var(--red); border-color:var(--red); } .scheduled { color:var(--dim); }
+  .bonus { color:var(--amber); border-color:var(--amber); }
+  #board { display:flex; gap:10px; overflow-x:auto; padding-bottom:8px; align-items:flex-start; }
+  .col { min-width:190px; width:190px; background:#0d110f; border:1px solid var(--line); border-radius:4px; }
+  .col.over { border-color:var(--em); }
+  .col h3 { margin:0; padding:6px 8px; font-size:12px; border-bottom:1px solid var(--line); display:flex; justify-content:space-between; }
+  .col .list { min-height:60px; padding:6px; display:grid; gap:4px; max-height:60vh; overflow-y:auto; }
+  .card { background:var(--panel); border:1px solid var(--line); padding:4px 6px; border-radius:3px; cursor:grab; font-size:12px; }
+  .card small { color:var(--dim); display:block; }
+  .warn-error { color:var(--red); } .warn-info { color:var(--amber); }
+  .row { display:flex; gap:8px; flex-wrap:wrap; align-items:center; }
+  #msg { color:var(--amber); min-height:1.2em; }
+  .count-bad { color:var(--amber); }
+</style>
+</head>
+<body>
+<header>
+  <h1>Doom Rounds Console</h1>
+  <span id="now" style="color:var(--dim)"></span>
+  <span id="msg"></span>
+  <a href="/admin" style="margin-left:auto;color:var(--dim)">Back to CTFd admin</a>
+</header>
+<main>
+  <section>
+    <h2>Clock</h2>
+    <div class="row">
+      <label>Offset (minutes) <input id="offset" type="number" step="1" style="width:90px"></label>
+      <button id="setOffset">Apply</button>
+      <label>Jump to story hour <input id="storyHour" type="number" min="0" max="24" step="0.5" style="width:70px"></label>
+      <button id="jump">Jump</button>
+      <button id="pause">Pause</button><button id="resume">Resume</button>
+      <button id="resetClock">Reset clock</button>
+      <label><input id="gate" type="checkbox"> Gate by clock</label>
+      <button id="seed" title="Assigns the bundled sample schedule to challenges with matching names">Load sample schedule</button>
+    </div>
+  </section>
+  <section>
+    <h2>Warnings</h2>
+    <div id="warnings"></div>
+  </section>
+  <section>
+    <h2>Rounds <span id="rcount" style="text-transform:none"></span></h2>
+    <div class="row" style="margin-bottom:8px">
+      <label>Round count <input id="count" type="number" min="1" max="40" style="width:70px"></label>
+      <button id="setCount">Set count and respace</button>
+      <button id="addBonus">Add hidden set</button>
+      <button id="addRound">Add round</button>
+    </div>
+    <table><thead><tr><th>#</th><th>Name</th><th>Opens (UTC)</th><th>Status</th><th>Challenges</th><th></th></tr></thead>
+      <tbody id="rounds"></tbody></table>
+  </section>
+  <section>
+    <h2>Board <span style="text-transform:none">drag challenges between columns; order inside a column is release order</span></h2>
+    <div class="row" style="margin-bottom:8px">
+      <input id="filter" placeholder="Filter pool by name" style="width:220px">
+      <select id="cat"><option value="">All categories</option></select>
+    </div>
+    <div id="board"></div>
+  </section>
+  <section>
+    <h2>Change log</h2>
+    <table><tbody id="audit"></tbody></table>
+  </section>
+</main>
+<script>
+const NONCE = "{{ Session.nonce if Session is defined else '' }}";
+let board = null;
+const $ = (s) => document.querySelector(s);
+const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+function say(t) { $('#msg').textContent = t || ''; if (t) setTimeout(() => $('#msg').textContent = '', 4000); }
+
+async function api(path, body) {
+  const opt = body === undefined ? {} : {
+    method: 'POST', headers: { 'Content-Type': 'application/json', 'CSRF-Token': NONCE }, body: JSON.stringify(body) };
+  const r = await fetch('/api/doom/v1/admin/' + path, opt);
+  const j = await r.json().catch(() => ({}));
+  if (!r.ok || !j.success) { say((j.errors && Object.values(j.errors)[0]) || ('Error ' + r.status)); throw new Error('api'); }
+  return j.data;
+}
+const act = async (path, body) => { board = await api(path, body); render(); say('Saved'); };
+
+function localInput(iso) { return iso.slice(0, 16); }
+
+function render() {
+  const b = board;
+  $('#now').textContent = 'Event time ' + b.now.replace('T', ' ').slice(0, 19) + ' UTC' + (b.clock.paused ? ' (paused)' : '');
+  $('#offset').value = b.clock.offset_minutes; $('#gate').checked = b.clock.gate_by_clock;
+  const normal = b.rounds.filter(r => r.kind === 'normal');
+  $('#count').value = normal.length; $('#rcount').textContent = '(' + normal.length + ' rounds)';
+  $('#warnings').innerHTML = b.warnings.length ? b.warnings.map(w =>
+    '<div class="warn-' + w.level + '">' + esc(w.text) + '</div>').join('') : '<span style="color:var(--dim)">No warnings.</span>';
+  $('#rounds').innerHTML = b.rounds.map(r => '<tr data-n="' + r.n + '">' +
+    '<td>' + r.n + '</td>' +
+    '<td><input class="rn" value="' + esc(r.name) + '"></td>' +
+    '<td><input class="rt" type="datetime-local" value="' + localInput(r.opens_at) + '"></td>' +
+    '<td><span class="tag ' + (r.kind === 'bonus' ? 'bonus' : (r.open ? 'open' : r.status)) + '">' +
+      (r.kind === 'bonus' ? 'hidden set, ' : '') + (r.open ? 'open' : r.status) + '</span></td>' +
+    '<td class="' + (r.kind === 'normal' && (r.count < 10 || r.count > 15) ? 'count-bad' : '') + '">' + r.count + '</td>' +
+    '<td class="row"><button data-a="hold">Hold</button><button data-a="release">Release now</button>' +
+    '<button data-a="schedule">Schedule</button><button class="danger" data-a="delete">Delete</button></td></tr>').join('');
+  const cats = [...new Set(b.pool.map(p => p.category))].sort();
+  const sel = $('#cat'), cur = sel.value;
+  sel.innerHTML = '<option value="">All categories</option>' + cats.map(c => '<option>' + esc(c) + '</option>').join('');
+  sel.value = cur;
+  const f = $('#filter').value.toLowerCase(), cat = sel.value;
+  const match = (p) => (!f || p.name.toLowerCase().includes(f)) && (!cat || p.category === cat);
+  const cols = [{ n: null, title: 'Unassigned (hidden)' }].concat(b.rounds.map(r => ({
+    n: r.n, title: (r.kind === 'bonus' ? 'Hidden set' : 'Round ' + r.n) + ' ' + r.name })));
+  $('#board').innerHTML = cols.map(c => {
+    const items = b.pool.filter(p => p.round_n === c.n && match(p)).sort((a, z) => a.sort_order - z.sort_order);
+    const total = b.pool.filter(p => p.round_n === c.n).length;
+    return '<div class="col" data-n="' + (c.n === null ? '' : c.n) + '"><h3><span>' + esc(c.title) + '</span><span>' + total + '</span></h3>' +
+      '<div class="list">' + items.map(p => '<div class="card" draggable="true" data-id="' + p.id + '">' + esc(p.name) +
+      '<small>' + esc(p.category) + ' &middot; ' + p.value + '</small></div>').join('') + '</div></div>';
+  }).join('');
+  $('#audit').innerHTML = b.audit.map(a => '<tr><td>' + esc(a.at.slice(0, 19).replace('T', ' ')) + '</td><td>' +
+    esc(a.actor) + '</td><td>' + esc(a.action) + '</td><td style="color:var(--dim)">' + esc(a.detail.slice(0, 120)) + '</td></tr>').join('');
+}
+
+document.addEventListener('click', (e) => {
+  const t = e.target;
+  const tr = t.closest('#rounds tr');
+  if (tr && t.dataset.a) {
+    const n = +tr.dataset.n;
+    if (t.dataset.a === 'delete' && !confirm('Delete round ' + n + '? Its challenges become unassigned.')) return;
+    act('rounds', { action: t.dataset.a, n });
+  }
+});
+document.addEventListener('change', (e) => {
+  const tr = e.target.closest('#rounds tr'); if (!tr) return;
+  const n = +tr.dataset.n;
+  if (e.target.classList.contains('rn')) act('rounds', { action: 'rename', n, name: e.target.value });
+  if (e.target.classList.contains('rt')) act('rounds', { action: 'retime', n, opens_at: e.target.value + ':00Z' });
+});
+$('#setCount').onclick = () => act('rounds', { action: 'set_count', count: +$('#count').value });
+$('#addRound').onclick = () => act('rounds', { action: 'create' });
+$('#addBonus').onclick = () => act('rounds', { action: 'create', kind: 'bonus' });
+$('#setOffset').onclick = () => act('clock', { offset_minutes: +$('#offset').value });
+$('#jump').onclick = () => act('clock', { set_story_hour: +$('#storyHour').value });
+$('#pause').onclick = () => act('clock', { pause: true });
+$('#resume').onclick = () => act('clock', { resume: true });
+$('#resetClock').onclick = () => act('clock', { reset: true });
+$('#gate').onchange = (e) => act('clock', { gate: e.target.checked });
+$('#seed').onclick = () => act('seed', {});
+$('#filter').oninput = render; $('#cat').onchange = render;
+
+let dragId = null;
+document.addEventListener('dragstart', (e) => { const c = e.target.closest('.card'); if (c) dragId = +c.dataset.id; });
+document.addEventListener('dragover', (e) => { const c = e.target.closest('.col'); if (c) { e.preventDefault(); c.classList.add('over'); } });
+document.addEventListener('dragleave', (e) => { const c = e.target.closest('.col'); if (c) c.classList.remove('over'); });
+document.addEventListener('drop', (e) => {
+  const col = e.target.closest('.col'); if (!col || dragId === null) return;
+  e.preventDefault(); col.classList.remove('over');
+  const n = col.dataset.n === '' ? null : +col.dataset.n;
+  const before = e.target.closest('.card');
+  const ids = [...col.querySelectorAll('.card')].map(c => +c.dataset.id).filter(i => i !== dragId);
+  let at = before ? ids.indexOf(+before.dataset.id) : ids.length;
+  if (at < 0) at = ids.length;
+  ids.splice(at, 0, dragId);
+  const items = ids.map((id, i) => ({ challenge_id: id, round_n: n, sort_order: i + 1 }));
+  dragId = null;
+  act('assignments', { assignments: items });
+});
+api('board').then((d) => { board = d; render(); });
+setInterval(() => api('board').then((d) => { board = d; if (!document.activeElement || document.activeElement.tagName !== 'INPUT') render(); }), 20000);
+</script>
+</body>
+</html>

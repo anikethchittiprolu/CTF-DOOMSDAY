@@ -1,0 +1,58 @@
+{
+  "bonus": [
+    {
+      "key": "bonus-hidden-doombot",
+      "name": "Hidden Doombot",
+      "region": "citadel",
+      "tier": "journeyman",
+      "value": 100,
+      "npc": "boris",
+      "round": "bonus"
+    },
+    {
+      "key": "bonus-strange-footnote",
+      "name": "Strange Footnote",
+      "region": "timeplatform",
+      "tier": "journeyman",
+      "value": 100,
+      "npc": "boris",
+      "round": "bonus"
+    },
+    {
+      "key": "bonus-mother-s-ring",
+      "name": "Mother's Ring",
+      "region": "haasenstadt",
+      "tier": "journeyman",
+      "value": 100,
+      "npc": "boris",
+      "round": "bonus"
+    },
+    {
+      "key": "bonus-richards-equation",
+      "name": "Richards' Equation",
+      "region": "baxter",
+      "tier": "journeyman",
+      "value": 100,
+      "npc": "boris",
+      "round": "bonus"
+    },
+    {
+      "key": "bonus-banner-s-proof",
+      "name": "Banner's Proof",
+      "region": "citadel",
+      "tier": "journeyman",
+      "value": 100,
+      "npc": "boris",
+      "round": "bonus"
+    },
+    {
+      "key": "bonus-last-word",
+      "name": "Last Word",
+      "region": "doomstadt",
+      "tier": "journeyman",
+      "value": 100,
+      "npc": "boris",
+      "round": "bonus"
+    }
+  ]
+}

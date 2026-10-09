@@ -1,0 +1,143 @@
+{
+  "messages": [
+    {
+      "id": "shuri-1",
+      "from": "shuri",
+      "subject": "You're in",
+      "trigger": {
+        "type": "first_solve"
+      },
+      "requires_challenge": "foundry-assembly-line",
+      "text": "You're in. Don't trust the welcome. Find out what the Engine eats. I will be in touch."
+    },
+    {
+      "id": "shuri-2",
+      "from": "shuri",
+      "subject": "Three down",
+      "trigger": {
+        "type": "solves",
+        "n": 3
+      },
+      "text": "Three tasks done. Doom is watching the Registry now. Stay quiet in the plaza and keep your answers close."
+    },
+    {
+      "id": "shuri-3",
+      "from": "shuri",
+      "subject": "A region cleared",
+      "trigger": {
+        "type": "region_cleared"
+      },
+      "text": "You emptied a whole region. That is noticed. Doombots reorder their patrols when a region goes quiet. Move on before they do."
+    },
+    {
+      "id": "shuri-4",
+      "from": "shuri",
+      "subject": "The cracks",
+      "trigger": {
+        "type": "act",
+        "act": "II"
+      },
+      "text": "The Incursion is real. I have seen the cracks from the roof of the Embassy. Doom is not lying about the clock, which is the worst part."
+    },
+    {
+      "id": "shuri-5",
+      "from": "shuri",
+      "subject": "It begins",
+      "trigger": {
+        "type": "act",
+        "act": "IV"
+      },
+      "text": "The second Earth is in the sky. Whatever you decide, decide soon. I will not be able to message you much longer."
+    },
+    {
+      "id": "shuri-6",
+      "from": "shuri",
+      "subject": "The Camp",
+      "trigger": {
+        "type": "challenge",
+        "challenge": "haasenstadt-last-transmission"
+      },
+      "text": "You found the recording. I have listened to it forty times. I think it is what he is trying to protect."
+    },
+    {
+      "id": "reed-1",
+      "from": "reed",
+      "subject": "Briefing, Baxter Building",
+      "trigger": {
+        "type": "challenge",
+        "challenge": "baxter-blackboard"
+      },
+      "text": "Welcome to the laboratory. I am Reed Richards. I am sorry about the mess. The blackboard holds a problem I have not solved. If you solve it, please do not tell Victor. He will want to check it."
+    },
+    {
+      "id": "reed-2",
+      "from": "reed",
+      "subject": "On the Incursions",
+      "trigger": {
+        "type": "challenge",
+        "challenge": "baxter-nursery-monitor"
+      },
+      "text": "The Incursions are not weapons. They are what happens when two universes get too close. Victor believes he can stop them by closing every door. I believe doors are the problem. We have both been wrong before."
+    },
+    {
+      "id": "reed-3",
+      "from": "reed",
+      "subject": "A request",
+      "trigger": {
+        "type": "challenge",
+        "challenge": "baxter-fantasti-car"
+      },
+      "text": "I have a request. If you reach the Engine, do not turn it on. I cannot explain why in a message. I can only say that I have run the numbers eleven times."
+    },
+    {
+      "id": "strange-1",
+      "from": "strange",
+      "subject": "A warning",
+      "trigger": {
+        "type": "act",
+        "act": "II"
+      },
+      "text": "There is one man in Latveria who does not flinch. He may be the only one who can reason with Doom. I do not trust him. I do not trust any of us."
+    },
+    {
+      "id": "strange-2",
+      "from": "strange",
+      "subject": "The mountain",
+      "trigger": {
+        "type": "challenge",
+        "challenge": "wundagore-chaos-spire"
+      },
+      "text": "You reached the spire. I would tell you to leave, but you would not listen, and I would not either. Keep your answers simple. The mountain punishes cleverness."
+    },
+    {
+      "id": "strange-3",
+      "from": "strange",
+      "subject": "The platform",
+      "trigger": {
+        "type": "challenge",
+        "challenge": "timeplatform-time-loop"
+      },
+      "text": "You broke the loop, or you joined it. I cannot tell. Either way, the Bureau thanks you, which it has never done before."
+    },
+    {
+      "id": "banner-1",
+      "from": "banner",
+      "subject": "I have joined him",
+      "trigger": {
+        "type": "act",
+        "act": "IV"
+      },
+      "text": "I checked Victor's mathematics. They are correct. I wish they were not. I will not ask you to forgive me. I am asking you to check them yourselves."
+    },
+    {
+      "id": "doom-1",
+      "from": "doom",
+      "subject": "A summons",
+      "trigger": {
+        "type": "solves",
+        "n": 10
+      },
+      "text": "Doom has noted your progress. Doom is not often interested. Doom is interested. Continue, and Doom will continue to watch."
+    }
+  ]
+}

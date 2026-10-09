@@ -1,0 +1,38 @@
+{
+  "region": "baxter",
+  "category": "Hardware and Crypto Math",
+  "challenges": [
+    {
+      "key": "baxter-blackboard",
+      "name": "Blackboard",
+      "tier": "apprentice",
+      "value": 50,
+      "npc": "reed",
+      "round": 1
+    },
+    {
+      "key": "baxter-nursery-monitor",
+      "name": "Nursery Monitor",
+      "tier": "apprentice",
+      "value": 50,
+      "npc": "reed",
+      "round": 2
+    },
+    {
+      "key": "baxter-chrome-gadget",
+      "name": "Chrome Gadget",
+      "tier": "journeyman",
+      "value": 100,
+      "npc": "reed",
+      "round": 3
+    },
+    {
+      "key": "baxter-fantasti-car",
+      "name": "Fantasti-Car",
+      "tier": "magister",
+      "value": 200,
+      "npc": "reed",
+      "round": 7
+    }
+  ]
+}

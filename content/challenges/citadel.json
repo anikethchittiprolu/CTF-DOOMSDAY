@@ -1,0 +1,46 @@
+{
+  "region": "citadel",
+  "category": "Final Chain",
+  "challenges": [
+    {
+      "key": "citadel-world-tree",
+      "name": "World Tree",
+      "tier": "apprentice",
+      "value": 50,
+      "npc": "loki",
+      "round": 1
+    },
+    {
+      "key": "citadel-throne-room",
+      "name": "Throne Room",
+      "tier": "apprentice",
+      "value": 50,
+      "npc": "loki",
+      "round": 2
+    },
+    {
+      "key": "citadel-engine-core",
+      "name": "Engine Core",
+      "tier": "adept",
+      "value": 150,
+      "npc": "doom",
+      "round": 5
+    },
+    {
+      "key": "citadel-loki-s-gate",
+      "name": "Loki's Gate",
+      "tier": "magister",
+      "value": 200,
+      "npc": "loki",
+      "round": 6
+    },
+    {
+      "key": "citadel-doomsday-engine",
+      "name": "Doomsday Engine",
+      "tier": "sorcerer-scientist",
+      "value": 300,
+      "npc": "doom",
+      "round": 8
+    }
+  ]
+}

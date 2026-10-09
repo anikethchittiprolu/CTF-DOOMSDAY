@@ -1,0 +1,62 @@
+{
+  "region": "doomstadt",
+  "category": "Web Exploitation",
+  "challenges": [
+    {
+      "key": "doomstadt-petition-box",
+      "name": "Petition Box",
+      "tier": "apprentice",
+      "value": 50,
+      "npc": "doombot",
+      "round": 1
+    },
+    {
+      "key": "doomstadt-tax-ledger",
+      "name": "Tax Ledger",
+      "tier": "apprentice",
+      "value": 50,
+      "npc": "doombot",
+      "round": 2
+    },
+    {
+      "key": "doomstadt-border-post",
+      "name": "Border Post",
+      "tier": "journeyman",
+      "value": 100,
+      "npc": "doombot",
+      "round": 3
+    },
+    {
+      "key": "doomstadt-state-bank",
+      "name": "State Bank",
+      "tier": "journeyman",
+      "value": 100,
+      "npc": "doombot",
+      "round": 4
+    },
+    {
+      "key": "doomstadt-statue-plinth",
+      "name": "Statue Plinth",
+      "tier": "adept",
+      "value": 150,
+      "npc": "doombot",
+      "round": 5
+    },
+    {
+      "key": "doomstadt-curfew-bell",
+      "name": "Curfew Bell",
+      "tier": "adept",
+      "value": 150,
+      "npc": "shuri",
+      "round": 6
+    },
+    {
+      "key": "doomstadt-plaza-broadcast",
+      "name": "Plaza Broadcast",
+      "tier": "magister",
+      "value": 200,
+      "npc": "doom",
+      "round": 7
+    }
+  ]
+}

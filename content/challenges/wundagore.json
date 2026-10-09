@@ -1,0 +1,46 @@
+{
+  "region": "wundagore",
+  "category": "Steganography",
+  "challenges": [
+    {
+      "key": "wundagore-shifting-stair",
+      "name": "Shifting Stair",
+      "tier": "apprentice",
+      "value": 50,
+      "npc": "strange",
+      "round": 1
+    },
+    {
+      "key": "wundagore-glitch-rock",
+      "name": "Glitch Rock",
+      "tier": "apprentice",
+      "value": 50,
+      "npc": "strange",
+      "round": 2
+    },
+    {
+      "key": "wundagore-impossible-peak",
+      "name": "Impossible Peak",
+      "tier": "journeyman",
+      "value": 100,
+      "npc": "strange",
+      "round": 4
+    },
+    {
+      "key": "wundagore-echo-cavern",
+      "name": "Echo Cavern",
+      "tier": "adept",
+      "value": 150,
+      "npc": "strange",
+      "round": 6
+    },
+    {
+      "key": "wundagore-chaos-spire",
+      "name": "Chaos Spire",
+      "tier": "magister",
+      "value": 200,
+      "npc": "strange",
+      "round": 8
+    }
+  ]
+}

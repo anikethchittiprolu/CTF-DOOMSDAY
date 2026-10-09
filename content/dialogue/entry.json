@@ -1,0 +1,12 @@
+{"dialogue":[
+ {"id":"entry-doomstadt","speaker":"doom","trigger":"region_enter","region":"doomstadt","text":"This is Doomstadt. Every wall in it was placed by Doom. Every door in it opens when Doom permits. Walk carefully."},
+ {"id":"entry-embassy","speaker":"boris","trigger":"region_enter","region":"embassy","text":"The Embassy is quiet tonight, young one. The screens are watching. I would speak softly, if I were you."},
+ {"id":"entry-foundry","speaker":"doom","trigger":"region_enter","region":"foundry","text":"The Foundry builds Doombots. Doom built the Foundry. Do not touch what has not been assigned to you."},
+ {"id":"entry-archives","speaker":"boris","trigger":"region_enter","region":"archives","text":"The Archives remember everything. Please mind the candles. They are older than I am."},
+ {"id":"entry-haasenstadt","speaker":"boris","trigger":"region_enter","region":"haasenstadt","text":"This is Haasenstadt, or what remains of it. I come here often. I do not tell the Sovereign."},
+ {"id":"entry-monastery","speaker":"doom","trigger":"region_enter","region":"monastery","text":"The Monastery is where Doom received the mask. The monks no longer speak of it. Doom permits their silence."},
+ {"id":"entry-wundagore","speaker":"boris","trigger":"region_enter","region":"wundagore","text":"The mountain does not wish to be mapped. I have tried. It is gentler when you do not insist."},
+ {"id":"entry-baxter","speaker":"doom","trigger":"region_enter","region":"baxter","text":"Richards keeps a tidy laboratory. It is a pity that so much cleverness has so little courage."},
+ {"id":"entry-timeplatform","speaker":"boris","trigger":"region_enter","region":"timeplatform","text":"The Time Platform is outside of time, which is why the clock here is broken. I find it comforting."},
+ {"id":"entry-citadel","speaker":"doom","trigger":"region_enter","region":"citadel","text":"Doom has come to the end of time. Doom did not expect company. Doom finds that Doom is glad of it."}
+]}
